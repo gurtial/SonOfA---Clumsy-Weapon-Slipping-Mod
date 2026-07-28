@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+    <Name>Son of a! - Clumsy Weapon Slipping</Name>
+    <Author>gurtial</Author>
+    <Version>1.0.0</Version>
+    <Description>Swinging a weapon has a chance to make it slip out of your hands and get flung forward - usually straight at whoever you were trying to hit. Every setting is configurable from an in-game MCM. Optional synergy with Loot and Degradation SE (a slip can tier your weapon's temper down). Requires SKSE64, SkyUI and MCM Helper.</Description>
+    <Website></Website>
+    <Groups>
+        <element>Gameplay Effects and Changes</element>
+        <element>Combat</element>
+    </Groups>
+</fomod>

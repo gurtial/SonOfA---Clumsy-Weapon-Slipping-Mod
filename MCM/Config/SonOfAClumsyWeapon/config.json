@@ -1,0 +1,124 @@
+{
+  "modName": "SonOfAClumsyWeapon",
+  "displayName": "Son of a!",
+  "cursorFillMode": "topToBottom",
+  "pages": [
+    {
+      "pageDisplayName": "Settings",
+      "cursorFillMode": "topToBottom",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clumsy Weapon Slipping",
+          "help": "Swinging a weapon has a chance to make it slip out of your hands and fly forward. Great for keeping brawlers honest."
+        },
+        {
+          "type": "toggle",
+          "text": "Mod Enabled",
+          "help": "Master switch for the whole mod.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|800",
+            "defaultValue": 1
+          }
+        },
+
+        { "type": "header", "text": "On a Weapon Swing" },
+        {
+          "type": "slider",
+          "text": "Slip Chance vs an Enemy",
+          "help": "Percent chance to slip when you swing with an enemy in front of you.",
+          "valueOptions": {
+            "min": 0, "max": 100, "step": 1,
+            "formatString": "{0}%",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|801",
+            "defaultValue": 15
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Throw Force",
+          "help": "How hard a slipped weapon is flung. Higher = flies further/faster. ~100 gives a proper throw.",
+          "valueOptions": {
+            "min": 5, "max": 150, "step": 1,
+            "formatString": "{0}",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|807",
+            "defaultValue": 100
+          }
+        },
+        {
+          "type": "toggle",
+          "text": "Show \"Son of a!\" Message",
+          "help": "Pop a corner notification whenever your weapon slips.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|808",
+            "defaultValue": 1
+          }
+        },
+
+        { "type": "header", "text": "Swinging Into a Wall / Thin Air" },
+        {
+          "type": "toggle",
+          "text": "Enable Wall / Whiff Slips",
+          "help": "When you swing with no enemy in front of you (into a wall, or just whiffing at empty air), use the separate chance below instead of the vs-enemy chance. Turn off to only ever slip when swinging at an enemy.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|802",
+            "defaultValue": 1
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Slip Chance vs Wall / Whiff",
+          "help": "Percent chance to slip when a swing has no enemy in front of it. Lower this if your weapon flies off too often while practicing.",
+          "valueOptions": {
+            "min": 0, "max": 100, "step": 1,
+            "formatString": "{0}%",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|803",
+            "defaultValue": 15
+          }
+        },
+
+        { "type": "header", "text": "Degradation (Loot and Degradation SE)" },
+        {
+          "type": "toggle",
+          "text": "Enable Weapon Degradation",
+          "help": "A slip has a chance to tier the weapon's temper back down toward its untempered state. Uses the same SKSE item-health value that Loot and Degradation SE reads and writes, so the two stay in sync.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|804",
+            "defaultValue": 1
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Degrade Chance on Slip",
+          "help": "Percent chance that a slip also degrades the weapon.",
+          "valueOptions": {
+            "min": 0, "max": 100, "step": 1,
+            "formatString": "{0}%",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|805",
+            "defaultValue": 15
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Temper Loss per Degrade",
+          "help": "How much temper (item health) a single degrade removes, in percentage points. ~10 is roughly one improvement tier. Never drops below untempered.",
+          "valueOptions": {
+            "min": 1, "max": 50, "step": 1,
+            "formatString": "{0}%",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfAClumsyWeapon.esp|806",
+            "defaultValue": 10
+          }
+        }
+      ]
+    }
+  ]
+}

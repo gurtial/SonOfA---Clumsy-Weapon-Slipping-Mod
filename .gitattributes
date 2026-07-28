@@ -1,0 +1,21 @@
+# Skyrim / mod binaries — NEVER apply text or line-ending conversion to these.
+*.esp   binary
+*.esl   binary
+*.esm   binary
+*.pex   binary
+*.bsa   binary
+*.dds   binary
+*.nif   binary
+*.hkx   binary
+*.fuz   binary
+*.wav   binary
+*.zip   binary
+*.7z    binary
+
+# Text — normalize to LF in the repository.
+*.psc   text eol=lf
+*.json  text eol=lf
+*.xml   text eol=lf
+*.md    text eol=lf
+*.py    text eol=lf
+*.txt   text eol=lf

@@ -1,0 +1,19 @@
+# --- Build output / distributables (built by tools/package_fomod.py) ---
+/dist/
+/build/
+*.zip
+*.7z
+*.rar
+
+# --- Papyrus / Creation Kit noise ---
+*.log
+Overwrite/
+*.bak
+
+# --- OS / editor cruft ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+*~
+.vs/
+.vscode/
