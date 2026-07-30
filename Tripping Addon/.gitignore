@@ -1,0 +1,9 @@
+# Build output / release archives (attached to releases, not committed)
+dist/
+*.zip
+
+# Editor / OS cruft
+.vscode/
+*.tmp
+Thumbs.db
+desktop.ini

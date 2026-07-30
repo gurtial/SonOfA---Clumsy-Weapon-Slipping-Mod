@@ -1,0 +1,138 @@
+{
+  "modName": "SonOfATripping",
+  "displayName": "Son of a! - Tripping",
+  "cursorFillMode": "topToBottom",
+  "pages": [
+    {
+      "pageDisplayName": "Settings",
+      "cursorFillMode": "topToBottom",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tripping Addon",
+          "help": "Walking over something you dropped on the ground has a chance to make you trip and hit the dirt. Pairs perfectly with Clumsy Weapon Slipping -- the weapon you just fumbled becomes the thing you faceplant over."
+        },
+        {
+          "type": "toggle",
+          "text": "Mod Enabled",
+          "help": "Master switch for the whole addon.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|800",
+            "defaultValue": 1
+          }
+        },
+
+        { "type": "header", "text": "Tripping" },
+        {
+          "type": "slider",
+          "text": "Trip Chance",
+          "help": "Percent chance to trip on a single walk over a dropped object. Standing on a pile keeps rolling every so often, so it will get you eventually.",
+          "valueOptions": {
+            "min": 0, "max": 100, "step": 1,
+            "formatString": "{0}%",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|801",
+            "defaultValue": 25
+          }
+        },
+        {
+          "type": "toggle",
+          "text": "Show \"Son of a!\" Message",
+          "help": "Pop a corner notification whenever you trip.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|808",
+            "defaultValue": 1
+          }
+        },
+
+        { "type": "header", "text": "What Counts as Trippable" },
+        {
+          "type": "toggle",
+          "text": "Only Dropped Weapons",
+          "help": "On: only weapons you drop can trip you (the on-theme default -- a slipped sword, a thrown dagger). Off: anything you drop is fair game -- potions, armour, that cabbage.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|802",
+            "defaultValue": 1
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Trippable Window",
+          "help": "How long (seconds) after you drop something it can still trip you. Keeps old junk across the map from being a hazard forever, and keeps the addon light.",
+          "valueOptions": {
+            "min": 5, "max": 300, "step": 5,
+            "formatString": "{0} s",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|803",
+            "defaultValue": 60
+          }
+        },
+
+        { "type": "header", "text": "NPCs (experimental)" },
+        {
+          "type": "toggle",
+          "text": "Let NPCs Trip Too",
+          "help": "Let anyone -- not just you -- trip over the things you dropped. Off by default to stay friendly to big modpacks. Turn it on for chaos.",
+          "valueOptions": {
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|806",
+            "defaultValue": 0
+          }
+        },
+        {
+          "type": "slider",
+          "text": "NPC Trip Chance",
+          "help": "Percent chance an NPC standing on one of your dropped objects trips. Kept separate (and lower) from your own chance.",
+          "valueOptions": {
+            "min": 0, "max": 100, "step": 1,
+            "formatString": "{0}%",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|807",
+            "defaultValue": 15
+          }
+        },
+
+        { "type": "header", "text": "Advanced" },
+        {
+          "type": "slider",
+          "text": "Trip Radius",
+          "help": "How close (game units) you must be to a dropped object to count as standing on it. ~75 is roughly your own footprint. Bigger = trip from further away.",
+          "valueOptions": {
+            "min": 30, "max": 200, "step": 5,
+            "formatString": "{0}",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|804",
+            "defaultValue": 75
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Ragdoll Force",
+          "help": "How hard the trip throws you. 0 = you just flop over where you stand. Higher = launched. Crank it for comedy.",
+          "valueOptions": {
+            "min": 0, "max": 150, "step": 5,
+            "formatString": "{0}",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|805",
+            "defaultValue": 0
+          }
+        },
+        {
+          "type": "slider",
+          "text": "Trip Cooldown",
+          "help": "Minimum seconds between trips, so you get a moment to stand up before the next faceplant.",
+          "valueOptions": {
+            "min": 0, "max": 15, "step": 1,
+            "formatString": "{0} s",
+            "sourceType": "GlobalValue",
+            "sourceForm": "SonOfATripping.esp|809",
+            "defaultValue": 3
+          }
+        }
+      ]
+    }
+  ]
+}

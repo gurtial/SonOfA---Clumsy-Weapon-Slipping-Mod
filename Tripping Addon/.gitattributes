@@ -1,0 +1,6 @@
+# Treat compiled Papyrus and the plugin as binary (no EOL munging, no bad diffs)
+*.pex binary
+*.esp binary
+*.esm binary
+*.esl binary
+*.bsa binary
