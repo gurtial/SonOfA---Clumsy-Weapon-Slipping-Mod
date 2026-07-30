@@ -1,4 +1,4 @@
-# --- Build output / distributables (built by tools/package_fomod.py) ---
+# --- Build output / distributables (built by tools/package.py) ---
 /dist/
 /build/
 *.zip

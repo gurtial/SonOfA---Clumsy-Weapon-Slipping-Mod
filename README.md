@@ -43,10 +43,11 @@ like **BFCO / MCO**, but requires none of them.
 
 ## Installation
 
-Install with a mod manager (Vortex / MO2) using the FOMOD archive from the
-[Releases](../../releases) page, or build it yourself (see [BUILD.md](BUILD.md)).
-The installer offers one optional checkbox — **Papyrus Source Scripts** — off by
-default; leave it unchecked unless you want the `.psc` source in your `Data` folder.
+Grab the archive from the [Releases](../../releases) page and install it with a mod
+manager — **Vortex** ("Install From File") or **MO2** — or just extract it into your
+`Data` folder. Or build it yourself (see [BUILD.md](BUILD.md)). It's a plain data-root
+archive, so there's nothing to configure at install time. The Papyrus `.psc` source
+lives in this repo under `Source/` if you want it.
 
 Then: load a save → **Mod Configuration → "Son of a!"** → tune to taste.
 

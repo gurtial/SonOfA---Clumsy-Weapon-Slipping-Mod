@@ -10,8 +10,7 @@ SonOfAClumsyWeapon.esp                 prebuilt ESL-flagged plugin
 Scripts/*.pex                          compiled Papyrus (what the game runs)
 Source/Scripts/*.psc                   Papyrus source
 MCM/Config/SonOfAClumsyWeapon/config.json   MCM Helper menu definition
-fomod/                                 FOMOD installer definition
-tools/package_fomod.py                 builds the distributable FOMOD zip
+tools/package.py                       builds the distributable data-root zip
 ```
 
 ## 1. Compiling the Papyrus scripts
@@ -55,12 +54,15 @@ GlobalVariables (`xx000800`–`xx000808`) that back the MCM sliders/toggles. Edi
 the **Creation Kit** or **xEdit** if you need to change records; nothing here depends
 on regenerating it.
 
-## 3. Packaging the FOMOD installer
+## 3. Packaging a release archive
 
 ```
-python tools/package_fomod.py
+py -3 tools/package.py 1.0
 ```
 
-Produces `dist/SonOfAClumsyWeapon-<version>.zip` (version read from `fomod/info.xml`),
-laid out as `00 Core` (required) + `01 Source` (optional) + `fomod/`. Upload that zip
-to the Releases page / Nexus.
+Produces `dist/SonOfAClumsyWeapon-1.0.zip` — a plain **data-root** archive whose root
+maps 1:1 onto `Data\`. It contains only the runtime payload (`.esp`, `Scripts\*.pex`,
+`MCM\Config\SonOfAClumsyWeapon\`) — no docs, no source. Install it with Vortex
+"Install From File", MO2, or by extracting into `Data\`; because it ships no
+generic-named files (`README.md`, `LICENSE`, …) it never collides with other mods.
+Upload that zip to the Releases page / Nexus.
